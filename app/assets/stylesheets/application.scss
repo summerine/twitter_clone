@@ -14,7 +14,9 @@
  *= require_self
  */
 
- @import 'bulma/bulma';
+@import "bulma/bulma";
+
+@import "font-awesome.css";
 
  .navbar-brand, .title {
      color: white;
