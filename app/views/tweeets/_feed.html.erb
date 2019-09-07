@@ -1,4 +1,4 @@
-<div class="column is-two-fifths">
+<div class="column is-half">
     <article class="media box">
         <figure class="media-left">
             <p class="image is-64x64">
@@ -8,7 +8,6 @@
                 <%= render 'tweeets/form' %>
             </div>
         </article>
-    </div>
 
     <% @tweeets.each do | tweeet | %>
     <div class="box">
@@ -25,22 +24,20 @@
                 <p><%= tweeet.tweeet %></p>
                 <nav class="level">
                     <div class="level-left is-mobile">
-                        <div class="level-item">
-                            <%= link_to tweeet do %>
+                            <%= link_to tweeet, class: "level-item" do %>
                                 <span class="icon"> <%= fa_icon "link" %> </span>
                             <% end %>
-                            <%= link_to edit_tweeet_path(tweeet) do %>
+                            <%= link_to edit_tweeet_path(tweeet), class: "level-item" do %>
                             <span class="icon">  <%= fa_icon "pencil " %> </span>
                             <% end %>
-                            <%= link_to tweeet, method: :delete, data: {confirm: "Delete this tweet?"} do %>
+                            <%= link_to tweeet, class: "level-item", method: :delete, data: {confirm: "Delete this tweet?"} do %>
                                 <span class="icon"> <%= fa_icon "trash" %> </span>
                             <%end%>
-                        </div>
                     </div>
                 </nav>
             </div>
         </div>
     </article>
-</div>
-
+    </div>
 <% end %> 
+</div>
